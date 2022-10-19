@@ -62,10 +62,6 @@ CREATE TYPE u8 (
   INPUT = u8in, OUTPUT = u8out, RECEIVE = u8recv, SEND = u8send, INTERNALLENGTH = 1, PASSEDBYVALUE, ALIGNMENT = char
 );
 
-UPDATE
-  pg_type
-SET oid = 9990001
-WHERE typname = 'u8';
 
 CREATE CAST (double precision AS u8) WITH INOUT AS ASSIGNMENT;
 
@@ -105,10 +101,6 @@ CREATE TYPE u16 (
   INPUT = u16in, OUTPUT = u16out, RECEIVE = u16recv, SEND = u16send, INTERNALLENGTH = 2, PASSEDBYVALUE, ALIGNMENT = int2
 );
 
-UPDATE
-  pg_type
-SET oid = 9990002
-WHERE typname = 'u16';
 
 CREATE CAST (double precision AS u16) WITH INOUT AS ASSIGNMENT;
 
@@ -148,10 +140,6 @@ CREATE TYPE u32 (
   INPUT = u32in, OUTPUT = u32out, RECEIVE = u32recv, SEND = u32send, INTERNALLENGTH = 4, PASSEDBYVALUE, ALIGNMENT = int4
 );
 
-UPDATE
-  pg_type
-SET oid = 9990003
-WHERE typname = 'u32';
 
 CREATE CAST (double precision AS u32) WITH INOUT AS ASSIGNMENT;
 
@@ -196,11 +184,6 @@ CREATE TYPE u64 (
   INPUT = u64in, OUTPUT = u64out, RECEIVE = u64recv, SEND = u64send, INTERNALLENGTH = 8, PASSEDBYVALUE, -- requires 64-bit
   ALIGNMENT = double
 );
-
-UPDATE
-  pg_type
-SET oid = 9990004
-WHERE typname = 'u64';
 
 CREATE CAST (double precision AS u64) WITH INOUT AS ASSIGNMENT;
 
