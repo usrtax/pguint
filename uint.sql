@@ -206,3 +206,23 @@ CREATE FUNCTION int1um (int1)
 CREATE OPERATOR - (
   PROCEDURE = int1um, RIGHTARG = int1
 );
+
+UPDATE
+  pg_type
+SET oid = 100001
+WHERE typname = 'u8';
+
+UPDATE
+  pg_type
+SET oid = 100002
+WHERE typname = 'u16';
+
+UPDATE
+  pg_type
+SET oid = 100003
+WHERE typname = 'u32';
+
+UPDATE
+  pg_type
+SET oid = 100004
+WHERE typname = 'u64';
