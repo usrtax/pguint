@@ -40,7 +40,7 @@ CREATE TYPE u8;
 
 UPDATE
   pg_type
-SET oid = 990001
+SET oid = 9990001
 WHERE typname = 'u8';
 
 CREATE FUNCTION u8in (cstring)
@@ -83,7 +83,7 @@ CREATE TYPE u16;
 
 UPDATE
   pg_type
-SET oid = 990002
+SET oid = 9990002
 WHERE typname = 'u16';
 
 CREATE FUNCTION u16in (cstring)
@@ -126,7 +126,7 @@ CREATE TYPE u32;
 
 UPDATE
   pg_type
-SET oid = 990003
+SET oid = 9990003
 WHERE typname = 'u32';
 
 CREATE FUNCTION u32in (cstring)
@@ -169,7 +169,7 @@ CREATE TYPE u64;
 
 UPDATE
   pg_type
-SET oid = 990004
+SET oid = 9990004
 WHERE typname = 'u64';
 
 CREATE FUNCTION bytea_u64 (bytea)
